@@ -1,0 +1,27 @@
+{% block paragraph %}
+  <div class="section-items-main-container">
+    {% block content %}
+      {% if content.field_item_human_face %}
+        <div class="member-face-block">{{ content.field_item_human_face }}</div>
+      {% endif %}
+      <div class="item-information-div">
+        {% if content.field_section_item_ %}
+          <p class="member-description-block">{{ content.field_section_item_ }}</p>
+        {% endif %}
+        <div class="author-companu-block">
+          {% if content.field_item_author %}
+            <h4 class="member-author-block">{{ content.field_item_author }}</h4>
+          {% endif %}
+          {% if content.field_company_name %}
+            <h4 class="company-name-block">{{ content.field_company_name }}</h4>
+          {% endif %}
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
+
+
+
+
+

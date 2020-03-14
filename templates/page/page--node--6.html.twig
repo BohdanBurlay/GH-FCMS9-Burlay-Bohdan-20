@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+<div class="page familia-page">
+  {% embed '@radix/navbar/navbar.twig' with {
+    placement: 'sticky-top',
+    container: 'fixed',
+    color: 'light',
+    utility_classes: ['bg-light'],
+  } %}
+
+    {% block branding %}
+      {% if page.navbar_branding %}
+        {{ page.navbar_branding }}
+      {% endif %}
+    {% endblock %}
+
+    {% block left %}
+      {% if page.navbar_left %}
+        <div class="mr-auto">
+          {{ page.navbar_left }}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block right %}
+      {% if page.navbar_right %}
+        {{ page.navbar_right }}
+      {% endif %}
+    {% endblock %}
+  {% endembed %}
+
+  <main class="pt-5 pb-5">
+    {% if page.header %}
+      <header class="page__header mb-3">
+        <div class="container-fluid header-content header-container">
+          {{ page.header }}
+        </div>
+      </header>
+    {% endif %}
+
+
+    {% if page.content %}
+      <div class="page__content candidate-families-page-content">
+        <div class="container-fluid main-content candidate-families-main-content">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endif %}
+  </main>
+
+  {% if page.footer %}
+    <footer class="page__footer">
+      <div class="container footer-wrapper">
+        <div class="d-flex justify-content-md-between align-items-md-center footer-container-wrapp">
+          {{ page.footer }}
+        </div>
+      </div>
+    </footer>
+  {% endif %}
+</div>
+<script>
+  const menuIcon = document.querySelector('.menu-icon')
+  const menuItems = document.querySelector('.header-menu')
+  menuIcon.onclick = function () {
+    menuItems.classList.toggle('menu-js-class')
+  }
+  const search=document.querySelector('.search-form-container>.js-form-type-search>input')
+  search.onfocus=()=> {
+    search.classList.add('form-js-class')
+  }
+  search.onblur=()=> {
+    search.classList.remove('form-js-class')
+  }
+</script>

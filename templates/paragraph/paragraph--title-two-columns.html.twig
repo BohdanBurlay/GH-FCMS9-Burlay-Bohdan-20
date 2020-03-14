@@ -1,0 +1,17 @@
+{% block paragraph %}
+  <section class="page-section-container">
+    {% block content %}
+      {% if content.field_section_title %}
+        <h2>{{ content.field_section_title }}</h2>
+      {% endif %}
+      <div class="section-items-container">
+        {% if content.field_wrapper_section_items %}
+          {{ content.field_wrapper_section_items }}
+        {% endif %}
+      </div>
+      {% if content.field_section_more_link %}
+        <div class="section-link-container">{{ content.field_section_more_link }}</div>
+      {% endif %}
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

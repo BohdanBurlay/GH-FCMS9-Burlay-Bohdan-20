@@ -1,0 +1,21 @@
+{% block paragraph %}
+  <div class="section-items-wrap">
+    {% block content %}
+      <div class="image-item-div">
+        {% if content.field_section_background %}
+          {{ content.field_section_background }}
+        {% endif %}
+      </div>
+      <h3>
+        {% if content.field_section_title %}
+          {{ content.field_section_title }}
+        {% endif %}
+      </h3>
+      <p>
+        {% if content.field_section_description %}
+          {{ content.field_section_description }}
+        {% endif %}
+      </p>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

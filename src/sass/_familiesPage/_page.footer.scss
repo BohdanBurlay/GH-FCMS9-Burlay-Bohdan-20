@@ -1,0 +1,21 @@
+// Page: Footer
+// -----------------------------------------------------------------------------
+.familia-page > .page__footer {
+  position: relative;
+}
+
+@media screen and(min-width: 320px) and(max-width: 626px) {
+  .footer-container-wrapp {
+    flex-direction: column;
+  }
+}
+
+@media screen and(min-width: 320px) and(max-width: 966px) {
+  .footer-wrapper {
+    padding: 0 20px !important;
+  }
+}
+
+.navbar-toggler-icon {
+  display: none !important;
+}

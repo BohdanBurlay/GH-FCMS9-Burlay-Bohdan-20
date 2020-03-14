@@ -1,0 +1,22 @@
+
+<section class="familia-page-section">
+
+  {% if header %}
+    <header>
+      {{ header }}
+    </header>
+  {% endif %}
+
+<div class="section-items-wrapp">
+  {% if rows -%}
+    {{ rows }}
+  {% elseif empty -%}
+    {{ empty }}
+  {% endif %}
+  {{ pager }}
+</div>
+  {{ more }}
+
+
+
+</section>

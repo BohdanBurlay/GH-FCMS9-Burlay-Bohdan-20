@@ -1,0 +1,197 @@
+.candidate-families-page-content {
+  position: relative;
+  background-color: #fbf7f4;
+  padding: 106px 0 100px 0;
+}
+
+.candidate-families-main-content {
+  max-width: 1170px;
+  margin: 15px auto 0 auto;
+}
+
+.page-way-text {
+  position: absolute;
+  top: -43px;
+  left: 0;
+  color: #a9a9a9;
+  font-family: $Lato;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+}
+
+.wrapper-container-item {
+  position: relative;
+  max-width: 815px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 30px;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+
+  & > .views-field-field-familia-title > .field-content {
+    position: absolute;
+    top: 0;
+    left: 51%;
+    max-width: 384px;
+    font-family: $Lato;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+
+  }
+
+  & > .views-field-field-author, .views-field-field-date > .field-content {
+    position: absolute;
+    top: 24%;
+    left: 51%;
+    font-family: $Lato;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  & > .views-field-field-date > .field-content {
+    left: 80%
+  }
+
+  & > .views-field-field-familia-description > .field-content {
+    position: absolute;
+    top: 35%;
+    left: 51%;
+    font-family: $Lato;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  & > .views-field-field-second-link > .field-content {
+    position: absolute;
+    top: 75%;
+    left: 51%;
+
+    & > a {
+      @include moreLinkStyles;
+
+      &:hover {
+        transition: 0.3s ease;
+        color: #B2972B;
+      }
+    }
+  }
+}
+
+.main-page-view {
+  background-color: white;
+  padding: 32px 0 0 39px;
+
+  & > nav {
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+
+    & > ul > li > a {
+      font-family: $Lato;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 23px;
+      color: #000000;
+      border: 0;
+      background-color: transparent;
+    }
+  }
+}
+
+.pager__item--previous, .pager__item--first, .pager__item--next, .pager__item--last {
+  display: none;
+}
+
+.is-active, .active {
+  & > a {
+    max-width: 31px;
+    max-height: 31px;
+    border-radius: 6px;
+    background-color: #fed52f !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+  }
+}
+.search-block-form{
+  position: absolute!important;
+  top: 3.5%;
+  right: 11%;
+}
+.search-form-container>.js-form-type-search {
+  & > input {
+    width: 444px;
+    max-height: 40px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    background-image: url("/themes/custom/mytheme/src/img/search-input-icon.png");
+    background-repeat: no-repeat;
+    background-position-x: 3%;
+    background-position-y: 64%;
+    &::placeholder{
+      color: #000000;
+      font-family: $Lato;
+      font-size: 16px;
+      font-weight: 300;
+      padding-left: 33px;
+      line-height: 24px;
+    }
+  }
+}
+.form-js-class{
+  background-position-x: -12% !important;
+}
+.search-form-container>#edit-actions{
+  display: none;
+}
+@media screen and(max-width: 1172px) {
+  .page-way-text {
+    padding-left: 30px;
+  }
+}
+
+@media screen and(min-width: 320px) and(max-width: 774px) {
+  .main-page-view {
+    padding: 3px 20px;
+  }
+  .wrapper-container-item {
+    padding-bottom: 314px;
+    max-width: 300px;
+    margin: 32px auto;
+
+    & > .views-field-field-familia-title > .field-content {
+      top: 39%;
+      left: 0;
+      font-size: 21px;
+    }
+
+    & > .views-field-field-author {
+      top: 53%;
+      left: 0;
+    }
+
+    & > .views-field-field-date > .field-content {
+      top: 53%;
+      left: 58%;
+      max-width: 122px;
+      width: 100%;
+    }
+
+    & > .views-field-field-familia-description > .field-content {
+      left: 0;
+      top: 58%;
+    }
+
+    & > .views-field-field-second-link > .field-content {
+      top: 96%;
+      left: 33%;
+    }
+  }
+}

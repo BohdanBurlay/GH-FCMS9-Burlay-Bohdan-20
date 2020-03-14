@@ -1,0 +1,26 @@
+{% block paragraph %}
+  <section class="front-page-section-catter">
+    {% block content %}
+      <div class="section-block-wrapp">
+        <div class="section-block-wrapp-conteiner">
+          {% if content.field_section_title %}
+            <h2>{{ content.field_section_title }}</h2>
+          {% endif %}
+
+          {% if content.field_section_description %}
+            <p>{{ content.field_section_description }}</p>
+          {% endif %}
+
+          {% if content.field_section_link %}
+            <div class="link-section-wrapper">{{ content.field_section_link }}</div>
+          {% endif %}
+        </div>
+      </div>
+      {% if content.field_section_background %}
+        <div class="section-block-content">
+          {{ content.field_section_background }}
+        </div>
+      {% endif %}
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

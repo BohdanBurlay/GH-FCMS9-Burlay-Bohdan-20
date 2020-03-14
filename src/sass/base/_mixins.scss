@@ -1,0 +1,26 @@
+@mixin sectionTitleStyles {
+  font-family: $Lato;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+@mixin sectionTitleBeforeStyles {
+  content: "";
+  position: absolute;
+  top: 46px;
+  left: 46%;
+  width: 8%;
+  height: 10%;
+  background-color: #fed52f;
+}
+
+@mixin moreLinkStyles {
+  color: #fed52f;
+  font-family: $Lato;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 23px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
